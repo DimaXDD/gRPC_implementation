@@ -140,23 +140,23 @@
 
    package math;
 
-service MathService {
-  rpc Add (MathRequest) returns (MathResponse);
-  rpc Subtract (MathRequest) returns (MathResponse);
-  rpc Multiply (MathRequest) returns (MathResponse);
-  rpc Divide (MathRequest) returns (MathResponse);
-  rpc Power (MathRequest) returns (MathResponse);
-}
+   service MathService {
+    rpc Add (MathRequest) returns (MathResponse);
+    rpc Subtract (MathRequest) returns (MathResponse);
+    rpc Multiply (MathRequest) returns (MathResponse);
+    rpc Divide (MathRequest) returns (MathResponse);
+    rpc Power (MathRequest) returns (MathResponse);
+   }
 
-message MathRequest {
-  double num1 = 1;
-  double num2 = 2;
-}
+   message MathRequest {
+    double num1 = 1;
+    double num2 = 2;
+   }
 
-message MathResponse {
-  double result = 1;
-  string error = 2;
-}
+   message MathResponse {
+    double result = 1;
+    string error = 2;
+   }
    ```
 
 4. В корневой папке проекта открываем консоль и пишем туда команды:
