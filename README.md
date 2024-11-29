@@ -176,6 +176,7 @@
 2. В этой папке создаем два файла: **server.cpp** и **client.cpp**.
 
 3. Пишем логику сервера и клиента, с учетом нашего proto-файла:
+
    Server.cpp
    ```cpp
    #include <grpcpp/grpcpp.h>
