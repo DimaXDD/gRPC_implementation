@@ -7,8 +7,8 @@ using grpc::Channel;
 using grpc::ClientContext;
 using grpc::Status;
 using math::MathService;
-using math::MathRequest;
-using math::MathResponse;
+using math::Parm2Request;
+using math::Parm2Result;
 
 class MathClient {
 public:
@@ -16,68 +16,68 @@ public:
         : stub_(MathService::NewStub(channel)) {
     }
 
-    void Add(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Add(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
         Status status = stub_->Add(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Addition result: " << response.result() << std::endl;
+            std::cout << "Addition result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Subtract(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Subtract(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Subtract(&context, request, &response);
+        Status status = stub_->Sub(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Subtraction result: " << response.result() << std::endl;
+            std::cout << "Subtraction result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Multiply(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Multiply(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Multiply(&context, request, &response);
+        Status status = stub_->Mul(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Multiplication result: " << response.result() << std::endl;
+            std::cout << "Multiplication result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Divide(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Divide(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Divide(&context, request, &response);
+        Status status = stub_->Div(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Division result: " << response.result() << std::endl;
+            std::cout << "Division result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << status.error_message() << std::endl;
@@ -85,35 +85,35 @@ public:
     }
 
 
-    void Power(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Power(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Power(&context, request, &response);
+        Status status = stub_->Pow(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Power result: " << response.result() << std::endl;
+            std::cout << "Power result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    std::future<void> MultiplyAsync(double num1, double num2) {
-        return std::async(std::launch::async, [this, num1, num2]() {
-            MathRequest request;
-            request.set_num1(num1);
-            request.set_num2(num2);
+    std::future<void> MultiplyAsync(double x, double y) {
+        return std::async(std::launch::async, [this, x, y]() {
+            Parm2Request request;
+            request.set_x(x);
+            request.set_y(y);
 
-            MathResponse response;
+            Parm2Result response;
             ClientContext context;
 
-            Status status = stub_->Multiply(&context, request, &response);
+            Status status = stub_->Mul(&context, request, &response);
             if (status.ok()) {
-                std::cout << "Multiplication result (async): " << response.result() << std::endl;
+                std::cout << "Multiplication result (async): " << response.z() << std::endl;
             }
             else {
                 std::cout << "Error: " << response.error() << std::endl;

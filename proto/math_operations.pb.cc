@@ -25,16 +25,16 @@ namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace math {
 
-inline constexpr MathResponse::Impl_::Impl_(
+inline constexpr Parm2Result::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : error_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        result_{0},
+        z_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR MathResponse::MathResponse(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Parm2Result::Parm2Result(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -42,25 +42,25 @@ PROTOBUF_CONSTEXPR MathResponse::MathResponse(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct MathResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR MathResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~MathResponseDefaultTypeInternal() {}
+struct Parm2ResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Parm2ResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Parm2ResultDefaultTypeInternal() {}
   union {
-    MathResponse _instance;
+    Parm2Result _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MathResponseDefaultTypeInternal _MathResponse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Parm2ResultDefaultTypeInternal _Parm2Result_default_instance_;
 
-inline constexpr MathRequest::Impl_::Impl_(
+inline constexpr Parm2Request::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : num1_{0},
-        num2_{0},
+      : x_{0},
+        y_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR MathRequest::MathRequest(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Parm2Request::Parm2Request(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -68,16 +68,16 @@ PROTOBUF_CONSTEXPR MathRequest::MathRequest(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct MathRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR MathRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~MathRequestDefaultTypeInternal() {}
+struct Parm2RequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Parm2RequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Parm2RequestDefaultTypeInternal() {}
   union {
-    MathRequest _instance;
+    Parm2Request _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MathRequestDefaultTypeInternal _MathRequest_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Parm2RequestDefaultTypeInternal _Parm2Request_default_instance_;
 }  // namespace math
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_math_5foperations_2eproto = nullptr;
@@ -87,54 +87,54 @@ const ::uint32_t
     TableStruct_math_5foperations_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::math::MathRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Request, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::math::MathRequest, _impl_.num1_),
-        PROTOBUF_FIELD_OFFSET(::math::MathRequest, _impl_.num2_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Request, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Request, _impl_.y_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::math::MathResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Result, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::math::MathResponse, _impl_.result_),
-        PROTOBUF_FIELD_OFFSET(::math::MathResponse, _impl_.error_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Result, _impl_.z_),
+        PROTOBUF_FIELD_OFFSET(::math::Parm2Result, _impl_.error_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::math::MathRequest)},
-        {10, -1, -1, sizeof(::math::MathResponse)},
+        {0, -1, -1, sizeof(::math::Parm2Request)},
+        {10, -1, -1, sizeof(::math::Parm2Result)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::math::_MathRequest_default_instance_._instance,
-    &::math::_MathResponse_default_instance_._instance,
+    &::math::_Parm2Request_default_instance_._instance,
+    &::math::_Parm2Result_default_instance_._instance,
 };
 const char descriptor_table_protodef_math_5foperations_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\025math_operations.proto\022\004math\")\n\013MathReq"
-    "uest\022\014\n\004num1\030\001 \001(\001\022\014\n\004num2\030\002 \001(\001\"-\n\014Math"
-    "Response\022\016\n\006result\030\001 \001(\001\022\r\n\005error\030\002 \001(\t2"
-    "\202\002\n\013MathService\022,\n\003Add\022\021.math.MathReques"
-    "t\032\022.math.MathResponse\0221\n\010Subtract\022\021.math"
-    ".MathRequest\032\022.math.MathResponse\0221\n\010Mult"
-    "iply\022\021.math.MathRequest\032\022.math.MathRespo"
-    "nse\022/\n\006Divide\022\021.math.MathRequest\032\022.math."
-    "MathResponse\022.\n\005Power\022\021.math.MathRequest"
-    "\032\022.math.MathResponseb\006proto3"
+    "\n\025math_operations.proto\022\004math\"$\n\014Parm2Re"
+    "quest\022\t\n\001x\030\001 \001(\001\022\t\n\001y\030\002 \001(\001\"\'\n\013Parm2Resu"
+    "lt\022\t\n\001z\030\001 \001(\001\022\r\n\005error\030\002 \001(\t2\363\001\n\013MathSer"
+    "vice\022,\n\003Add\022\022.math.Parm2Request\032\021.math.P"
+    "arm2Result\022,\n\003Sub\022\022.math.Parm2Request\032\021."
+    "math.Parm2Result\022,\n\003Mul\022\022.math.Parm2Requ"
+    "est\032\021.math.Parm2Result\022,\n\003Div\022\022.math.Par"
+    "m2Request\032\021.math.Parm2Result\022,\n\003Pow\022\022.ma"
+    "th.Parm2Request\032\021.math.Parm2Resultb\006prot"
+    "o3"
 };
 static ::absl::once_flag descriptor_table_math_5foperations_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_math_5foperations_2eproto = {
     false,
     false,
-    388,
+    362,
     descriptor_table_protodef_math_5foperations_2eproto,
     "math_operations.proto",
     &descriptor_table_math_5foperations_2eproto_once,
@@ -150,44 +150,44 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_math_5foperati
 namespace math {
 // ===================================================================
 
-class MathRequest::_Internal {
+class Parm2Request::_Internal {
  public:
 };
 
-MathRequest::MathRequest(::google::protobuf::Arena* arena)
+Parm2Request::Parm2Request(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:math.MathRequest)
+  // @@protoc_insertion_point(arena_constructor:math.Parm2Request)
 }
-MathRequest::MathRequest(
-    ::google::protobuf::Arena* arena, const MathRequest& from)
-    : MathRequest(arena) {
+Parm2Request::Parm2Request(
+    ::google::protobuf::Arena* arena, const Parm2Request& from)
+    : Parm2Request(arena) {
   MergeFrom(from);
 }
-inline PROTOBUF_NDEBUG_INLINE MathRequest::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Parm2Request::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0} {}
 
-inline void MathRequest::SharedCtor(::_pb::Arena* arena) {
+inline void Parm2Request::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, num1_),
+               offsetof(Impl_, x_),
            0,
-           offsetof(Impl_, num2_) -
-               offsetof(Impl_, num1_) +
-               sizeof(Impl_::num2_));
+           offsetof(Impl_, y_) -
+               offsetof(Impl_, x_) +
+               sizeof(Impl_::y_));
 }
-MathRequest::~MathRequest() {
-  // @@protoc_insertion_point(destructor:math.MathRequest)
+Parm2Request::~Parm2Request() {
+  // @@protoc_insertion_point(destructor:math.Parm2Request)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
-inline void MathRequest::SharedDtor() {
+inline void Parm2Request::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.~Impl_();
 }
@@ -195,33 +195,33 @@ inline void MathRequest::SharedDtor() {
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
 const ::google::protobuf::MessageLite::ClassDataFull
-    MathRequest::_class_data_ = {
+    Parm2Request::_class_data_ = {
         ::google::protobuf::Message::ClassData{
-            &_MathRequest_default_instance_._instance,
+            &_Parm2Request_default_instance_._instance,
             &_table_.header,
             nullptr,  // OnDemandRegisterArenaDtor
             nullptr,  // IsInitialized
-            &MathRequest::MergeImpl,
+            &Parm2Request::MergeImpl,
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-            ::google::protobuf::Message::GetDeleteImpl<MathRequest>(),
-            ::google::protobuf::Message::GetNewImpl<MathRequest>(),
-            ::google::protobuf::Message::GetClearImpl<MathRequest>(), &MathRequest::ByteSizeLong,
-                &MathRequest::_InternalSerialize,
+            ::google::protobuf::Message::GetDeleteImpl<Parm2Request>(),
+            ::google::protobuf::Message::GetNewImpl<Parm2Request>(),
+            ::google::protobuf::Message::GetClearImpl<Parm2Request>(), &Parm2Request::ByteSizeLong,
+                &Parm2Request::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-            PROTOBUF_FIELD_OFFSET(MathRequest, _impl_._cached_size_),
+            PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_._cached_size_),
             false,
         },
-        &MathRequest::kDescriptorMethods,
+        &Parm2Request::kDescriptorMethods,
         &descriptor_table_math_5foperations_2eproto,
         nullptr,  // tracker
 };
-const ::google::protobuf::MessageLite::ClassData* MathRequest::GetClassData() const {
+const ::google::protobuf::MessageLite::ClassData* Parm2Request::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> MathRequest::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Parm2Request::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -236,23 +236,23 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> MathRequest::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::math::MathRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::math::Parm2Request>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // double num2 = 2;
+    // double y = 2;
     {::_pbi::TcParser::FastF64S1,
-     {17, 63, 0, PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num2_)}},
-    // double num1 = 1;
+     {17, 63, 0, PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.y_)}},
+    // double x = 1;
     {::_pbi::TcParser::FastF64S1,
-     {9, 63, 0, PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num1_)}},
+     {9, 63, 0, PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.x_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // double num1 = 1;
-    {PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num1_), 0, 0,
+    // double x = 1;
+    {PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kDouble)},
-    // double num2 = 2;
-    {PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num2_), 0, 0,
+    // double y = 2;
+    {PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kDouble)},
   }},
   // no aux_entries
@@ -260,46 +260,46 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> MathRequest::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void MathRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:math.MathRequest)
+PROTOBUF_NOINLINE void Parm2Request::Clear() {
+// @@protoc_insertion_point(message_clear_start:math.Parm2Request)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.num1_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.num2_) -
-      reinterpret_cast<char*>(&_impl_.num1_)) + sizeof(_impl_.num2_));
+  ::memset(&_impl_.x_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.y_) -
+      reinterpret_cast<char*>(&_impl_.x_)) + sizeof(_impl_.y_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* MathRequest::_InternalSerialize(
+        ::uint8_t* Parm2Request::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const MathRequest& this_ = static_cast<const MathRequest&>(base);
+          const Parm2Request& this_ = static_cast<const Parm2Request&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* MathRequest::_InternalSerialize(
+        ::uint8_t* Parm2Request::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const MathRequest& this_ = *this;
+          const Parm2Request& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:math.MathRequest)
+          // @@protoc_insertion_point(serialize_to_array_start:math.Parm2Request)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
-          // double num1 = 1;
-          if (::absl::bit_cast<::uint64_t>(this_._internal_num1()) != 0) {
+          // double x = 1;
+          if (::absl::bit_cast<::uint64_t>(this_._internal_x()) != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteDoubleToArray(
-                1, this_._internal_num1(), target);
+                1, this_._internal_x(), target);
           }
 
-          // double num2 = 2;
-          if (::absl::bit_cast<::uint64_t>(this_._internal_num2()) != 0) {
+          // double y = 2;
+          if (::absl::bit_cast<::uint64_t>(this_._internal_y()) != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteDoubleToArray(
-                2, this_._internal_num2(), target);
+                2, this_._internal_y(), target);
           }
 
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -307,18 +307,18 @@ PROTOBUF_NOINLINE void MathRequest::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:math.MathRequest)
+          // @@protoc_insertion_point(serialize_to_array_end:math.Parm2Request)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t MathRequest::ByteSizeLong(const MessageLite& base) {
-          const MathRequest& this_ = static_cast<const MathRequest&>(base);
+        ::size_t Parm2Request::ByteSizeLong(const MessageLite& base) {
+          const Parm2Request& this_ = static_cast<const Parm2Request&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t MathRequest::ByteSizeLong() const {
-          const MathRequest& this_ = *this;
+        ::size_t Parm2Request::ByteSizeLong() const {
+          const Parm2Request& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:math.MathRequest)
+          // @@protoc_insertion_point(message_byte_size_start:math.Parm2Request)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -327,12 +327,12 @@ PROTOBUF_NOINLINE void MathRequest::Clear() {
 
           ::_pbi::Prefetch5LinesFrom7Lines(&this_);
            {
-            // double num1 = 1;
-            if (::absl::bit_cast<::uint64_t>(this_._internal_num1()) != 0) {
+            // double x = 1;
+            if (::absl::bit_cast<::uint64_t>(this_._internal_x()) != 0) {
               total_size += 9;
             }
-            // double num2 = 2;
-            if (::absl::bit_cast<::uint64_t>(this_._internal_num2()) != 0) {
+            // double y = 2;
+            if (::absl::bit_cast<::uint64_t>(this_._internal_y()) != 0) {
               total_size += 9;
             }
           }
@@ -340,99 +340,99 @@ PROTOBUF_NOINLINE void MathRequest::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void MathRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<MathRequest*>(&to_msg);
-  auto& from = static_cast<const MathRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:math.MathRequest)
+void Parm2Request::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Parm2Request*>(&to_msg);
+  auto& from = static_cast<const Parm2Request&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:math.Parm2Request)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (::absl::bit_cast<::uint64_t>(from._internal_num1()) != 0) {
-    _this->_impl_.num1_ = from._impl_.num1_;
+  if (::absl::bit_cast<::uint64_t>(from._internal_x()) != 0) {
+    _this->_impl_.x_ = from._impl_.x_;
   }
-  if (::absl::bit_cast<::uint64_t>(from._internal_num2()) != 0) {
-    _this->_impl_.num2_ = from._impl_.num2_;
+  if (::absl::bit_cast<::uint64_t>(from._internal_y()) != 0) {
+    _this->_impl_.y_ = from._impl_.y_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void MathRequest::CopyFrom(const MathRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:math.MathRequest)
+void Parm2Request::CopyFrom(const Parm2Request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:math.Parm2Request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void MathRequest::InternalSwap(MathRequest* PROTOBUF_RESTRICT other) {
+void Parm2Request::InternalSwap(Parm2Request* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num2_)
-      + sizeof(MathRequest::_impl_.num2_)
-      - PROTOBUF_FIELD_OFFSET(MathRequest, _impl_.num1_)>(
-          reinterpret_cast<char*>(&_impl_.num1_),
-          reinterpret_cast<char*>(&other->_impl_.num1_));
+      PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.y_)
+      + sizeof(Parm2Request::_impl_.y_)
+      - PROTOBUF_FIELD_OFFSET(Parm2Request, _impl_.x_)>(
+          reinterpret_cast<char*>(&_impl_.x_),
+          reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata MathRequest::GetMetadata() const {
+::google::protobuf::Metadata Parm2Request::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class MathResponse::_Internal {
+class Parm2Result::_Internal {
  public:
 };
 
-MathResponse::MathResponse(::google::protobuf::Arena* arena)
+Parm2Result::Parm2Result(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:math.MathResponse)
+  // @@protoc_insertion_point(arena_constructor:math.Parm2Result)
 }
-inline PROTOBUF_NDEBUG_INLINE MathResponse::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Parm2Result::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::math::MathResponse& from_msg)
+    const Impl_& from, const ::math::Parm2Result& from_msg)
       : error_(arena, from.error_),
         _cached_size_{0} {}
 
-MathResponse::MathResponse(
+Parm2Result::Parm2Result(
     ::google::protobuf::Arena* arena,
-    const MathResponse& from)
+    const Parm2Result& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  MathResponse* const _this = this;
+  Parm2Result* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  _impl_.result_ = from._impl_.result_;
+  _impl_.z_ = from._impl_.z_;
 
-  // @@protoc_insertion_point(copy_constructor:math.MathResponse)
+  // @@protoc_insertion_point(copy_constructor:math.Parm2Result)
 }
-inline PROTOBUF_NDEBUG_INLINE MathResponse::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Parm2Result::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : error_(arena),
         _cached_size_{0} {}
 
-inline void MathResponse::SharedCtor(::_pb::Arena* arena) {
+inline void Parm2Result::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.result_ = {};
+  _impl_.z_ = {};
 }
-MathResponse::~MathResponse() {
-  // @@protoc_insertion_point(destructor:math.MathResponse)
+Parm2Result::~Parm2Result() {
+  // @@protoc_insertion_point(destructor:math.Parm2Result)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
-inline void MathResponse::SharedDtor() {
+inline void Parm2Result::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.error_.Destroy();
   _impl_.~Impl_();
@@ -441,33 +441,33 @@ inline void MathResponse::SharedDtor() {
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
 const ::google::protobuf::MessageLite::ClassDataFull
-    MathResponse::_class_data_ = {
+    Parm2Result::_class_data_ = {
         ::google::protobuf::Message::ClassData{
-            &_MathResponse_default_instance_._instance,
+            &_Parm2Result_default_instance_._instance,
             &_table_.header,
             nullptr,  // OnDemandRegisterArenaDtor
             nullptr,  // IsInitialized
-            &MathResponse::MergeImpl,
+            &Parm2Result::MergeImpl,
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-            ::google::protobuf::Message::GetDeleteImpl<MathResponse>(),
-            ::google::protobuf::Message::GetNewImpl<MathResponse>(),
-            ::google::protobuf::Message::GetClearImpl<MathResponse>(), &MathResponse::ByteSizeLong,
-                &MathResponse::_InternalSerialize,
+            ::google::protobuf::Message::GetDeleteImpl<Parm2Result>(),
+            ::google::protobuf::Message::GetNewImpl<Parm2Result>(),
+            ::google::protobuf::Message::GetClearImpl<Parm2Result>(), &Parm2Result::ByteSizeLong,
+                &Parm2Result::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-            PROTOBUF_FIELD_OFFSET(MathResponse, _impl_._cached_size_),
+            PROTOBUF_FIELD_OFFSET(Parm2Result, _impl_._cached_size_),
             false,
         },
-        &MathResponse::kDescriptorMethods,
+        &Parm2Result::kDescriptorMethods,
         &descriptor_table_math_5foperations_2eproto,
         nullptr,  // tracker
 };
-const ::google::protobuf::MessageLite::ClassData* MathResponse::GetClassData() const {
+const ::google::protobuf::MessageLite::ClassData* Parm2Result::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 31, 2> MathResponse::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 30, 2> Parm2Result::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -482,72 +482,72 @@ const ::_pbi::TcParseTable<1, 2, 0, 31, 2> MathResponse::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::math::MathResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::math::Parm2Result>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string error = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(MathResponse, _impl_.error_)}},
-    // double result = 1;
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Parm2Result, _impl_.error_)}},
+    // double z = 1;
     {::_pbi::TcParser::FastF64S1,
-     {9, 63, 0, PROTOBUF_FIELD_OFFSET(MathResponse, _impl_.result_)}},
+     {9, 63, 0, PROTOBUF_FIELD_OFFSET(Parm2Result, _impl_.z_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // double result = 1;
-    {PROTOBUF_FIELD_OFFSET(MathResponse, _impl_.result_), 0, 0,
+    // double z = 1;
+    {PROTOBUF_FIELD_OFFSET(Parm2Result, _impl_.z_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kDouble)},
     // string error = 2;
-    {PROTOBUF_FIELD_OFFSET(MathResponse, _impl_.error_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Parm2Result, _impl_.error_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\21\0\5\0\0\0\0\0"
-    "math.MathResponse"
+    "\20\0\5\0\0\0\0\0"
+    "math.Parm2Result"
     "error"
   }},
 };
 
-PROTOBUF_NOINLINE void MathResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:math.MathResponse)
+PROTOBUF_NOINLINE void Parm2Result::Clear() {
+// @@protoc_insertion_point(message_clear_start:math.Parm2Result)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   _impl_.error_.ClearToEmpty();
-  _impl_.result_ = 0;
+  _impl_.z_ = 0;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* MathResponse::_InternalSerialize(
+        ::uint8_t* Parm2Result::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const MathResponse& this_ = static_cast<const MathResponse&>(base);
+          const Parm2Result& this_ = static_cast<const Parm2Result&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* MathResponse::_InternalSerialize(
+        ::uint8_t* Parm2Result::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const MathResponse& this_ = *this;
+          const Parm2Result& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:math.MathResponse)
+          // @@protoc_insertion_point(serialize_to_array_start:math.Parm2Result)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
-          // double result = 1;
-          if (::absl::bit_cast<::uint64_t>(this_._internal_result()) != 0) {
+          // double z = 1;
+          if (::absl::bit_cast<::uint64_t>(this_._internal_z()) != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteDoubleToArray(
-                1, this_._internal_result(), target);
+                1, this_._internal_z(), target);
           }
 
           // string error = 2;
           if (!this_._internal_error().empty()) {
             const std::string& _s = this_._internal_error();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "math.MathResponse.error");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "math.Parm2Result.error");
             target = stream->WriteStringMaybeAliased(2, _s, target);
           }
 
@@ -556,18 +556,18 @@ PROTOBUF_NOINLINE void MathResponse::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:math.MathResponse)
+          // @@protoc_insertion_point(serialize_to_array_end:math.Parm2Result)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t MathResponse::ByteSizeLong(const MessageLite& base) {
-          const MathResponse& this_ = static_cast<const MathResponse&>(base);
+        ::size_t Parm2Result::ByteSizeLong(const MessageLite& base) {
+          const Parm2Result& this_ = static_cast<const Parm2Result&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t MathResponse::ByteSizeLong() const {
-          const MathResponse& this_ = *this;
+        ::size_t Parm2Result::ByteSizeLong() const {
+          const Parm2Result& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:math.MathResponse)
+          // @@protoc_insertion_point(message_byte_size_start:math.Parm2Result)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -581,8 +581,8 @@ PROTOBUF_NOINLINE void MathResponse::Clear() {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_error());
             }
-            // double result = 1;
-            if (::absl::bit_cast<::uint64_t>(this_._internal_result()) != 0) {
+            // double z = 1;
+            if (::absl::bit_cast<::uint64_t>(this_._internal_z()) != 0) {
               total_size += 9;
             }
           }
@@ -590,10 +590,10 @@ PROTOBUF_NOINLINE void MathResponse::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void MathResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<MathResponse*>(&to_msg);
-  auto& from = static_cast<const MathResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:math.MathResponse)
+void Parm2Result::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Parm2Result*>(&to_msg);
+  auto& from = static_cast<const Parm2Result&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:math.Parm2Result)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -601,30 +601,30 @@ void MathResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::go
   if (!from._internal_error().empty()) {
     _this->_internal_set_error(from._internal_error());
   }
-  if (::absl::bit_cast<::uint64_t>(from._internal_result()) != 0) {
-    _this->_impl_.result_ = from._impl_.result_;
+  if (::absl::bit_cast<::uint64_t>(from._internal_z()) != 0) {
+    _this->_impl_.z_ = from._impl_.z_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void MathResponse::CopyFrom(const MathResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:math.MathResponse)
+void Parm2Result::CopyFrom(const Parm2Result& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:math.Parm2Result)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void MathResponse::InternalSwap(MathResponse* PROTOBUF_RESTRICT other) {
+void Parm2Result::InternalSwap(Parm2Result* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.error_, &other->_impl_.error_, arena);
-        swap(_impl_.result_, other->_impl_.result_);
+        swap(_impl_.z_, other->_impl_.z_);
 }
 
-::google::protobuf::Metadata MathResponse::GetMetadata() const {
+::google::protobuf::Metadata Parm2Result::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

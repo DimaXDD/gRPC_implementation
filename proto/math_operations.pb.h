@@ -50,12 +50,12 @@ struct TableStruct_math_5foperations_2eproto {
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_math_5foperations_2eproto;
 namespace math {
-class MathRequest;
-struct MathRequestDefaultTypeInternal;
-extern MathRequestDefaultTypeInternal _MathRequest_default_instance_;
-class MathResponse;
-struct MathResponseDefaultTypeInternal;
-extern MathResponseDefaultTypeInternal _MathResponse_default_instance_;
+class Parm2Request;
+struct Parm2RequestDefaultTypeInternal;
+extern Parm2RequestDefaultTypeInternal _Parm2Request_default_instance_;
+class Parm2Result;
+struct Parm2ResultDefaultTypeInternal;
+extern Parm2ResultDefaultTypeInternal _Parm2Result_default_instance_;
 }  // namespace math
 namespace google {
 namespace protobuf {
@@ -69,23 +69,23 @@ namespace math {
 
 // -------------------------------------------------------------------
 
-class MathResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:math.MathResponse) */ {
+class Parm2Result final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:math.Parm2Result) */ {
  public:
-  inline MathResponse() : MathResponse(nullptr) {}
-  ~MathResponse() PROTOBUF_FINAL;
+  inline Parm2Result() : Parm2Result(nullptr) {}
+  ~Parm2Result() PROTOBUF_FINAL;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR MathResponse(
+  explicit PROTOBUF_CONSTEXPR Parm2Result(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline MathResponse(const MathResponse& from) : MathResponse(nullptr, from) {}
-  inline MathResponse(MathResponse&& from) noexcept
-      : MathResponse(nullptr, std::move(from)) {}
-  inline MathResponse& operator=(const MathResponse& from) {
+  inline Parm2Result(const Parm2Result& from) : Parm2Result(nullptr, from) {}
+  inline Parm2Result(Parm2Result&& from) noexcept
+      : Parm2Result(nullptr, std::move(from)) {}
+  inline Parm2Result& operator=(const Parm2Result& from) {
     CopyFrom(from);
     return *this;
   }
-  inline MathResponse& operator=(MathResponse&& from) noexcept {
+  inline Parm2Result& operator=(Parm2Result&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -117,16 +117,16 @@ class MathResponse final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const MathResponse& default_instance() {
+  static const Parm2Result& default_instance() {
     return *internal_default_instance();
   }
-  static inline const MathResponse* internal_default_instance() {
-    return reinterpret_cast<const MathResponse*>(
-        &_MathResponse_default_instance_);
+  static inline const Parm2Result* internal_default_instance() {
+    return reinterpret_cast<const Parm2Result*>(
+        &_Parm2Result_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 1;
-  friend void swap(MathResponse& a, MathResponse& b) { a.Swap(&b); }
-  inline void Swap(MathResponse* other) {
+  friend void swap(Parm2Result& a, Parm2Result& b) { a.Swap(&b); }
+  inline void Swap(Parm2Result* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -138,7 +138,7 @@ class MathResponse final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(MathResponse* other) {
+  void UnsafeArenaSwap(Parm2Result* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -146,13 +146,13 @@ class MathResponse final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  MathResponse* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
-    return ::google::protobuf::Message::DefaultConstruct<MathResponse>(arena);
+  Parm2Result* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
+    return ::google::protobuf::Message::DefaultConstruct<Parm2Result>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const MathResponse& from);
+  void CopyFrom(const Parm2Result& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const MathResponse& from) { MathResponse::MergeImpl(*this, from); }
+  void MergeFrom(const Parm2Result& from) { Parm2Result::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -189,16 +189,16 @@ class MathResponse final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(MathResponse* other);
+  void InternalSwap(Parm2Result* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "math.MathResponse"; }
+  static ::absl::string_view FullMessageName() { return "math.Parm2Result"; }
 
  protected:
-  explicit MathResponse(::google::protobuf::Arena* arena);
-  MathResponse(::google::protobuf::Arena* arena, const MathResponse& from);
-  MathResponse(::google::protobuf::Arena* arena, MathResponse&& from) noexcept
-      : MathResponse(arena) {
+  explicit Parm2Result(::google::protobuf::Arena* arena);
+  Parm2Result(::google::protobuf::Arena* arena, const Parm2Result& from);
+  Parm2Result(::google::protobuf::Arena* arena, Parm2Result&& from) noexcept
+      : Parm2Result(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -211,7 +211,7 @@ class MathResponse final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kErrorFieldNumber = 2,
-    kResultFieldNumber = 1,
+    kZFieldNumber = 1,
   };
   // string error = 2;
   void clear_error() ;
@@ -229,27 +229,27 @@ class MathResponse final : public ::google::protobuf::Message
   std::string* _internal_mutable_error();
 
   public:
-  // double result = 1;
-  void clear_result() ;
-  double result() const;
-  void set_result(double value);
+  // double z = 1;
+  void clear_z() ;
+  double z() const;
+  void set_z(double value);
 
   private:
-  double _internal_result() const;
-  void _internal_set_result(double value);
+  double _internal_z() const;
+  void _internal_set_z(double value);
 
   public:
-  // @@protoc_insertion_point(class_scope:math.MathResponse)
+  // @@protoc_insertion_point(class_scope:math.Parm2Result)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      31, 2>
+      30, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_MathResponse_default_instance_;
+      &_Parm2Result_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -264,9 +264,9 @@ class MathResponse final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const MathResponse& from_msg);
+                          const Parm2Result& from_msg);
     ::google::protobuf::internal::ArenaStringPtr error_;
-    double result_;
+    double z_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -275,23 +275,23 @@ class MathResponse final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class MathRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:math.MathRequest) */ {
+class Parm2Request final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:math.Parm2Request) */ {
  public:
-  inline MathRequest() : MathRequest(nullptr) {}
-  ~MathRequest() PROTOBUF_FINAL;
+  inline Parm2Request() : Parm2Request(nullptr) {}
+  ~Parm2Request() PROTOBUF_FINAL;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR MathRequest(
+  explicit PROTOBUF_CONSTEXPR Parm2Request(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline MathRequest(const MathRequest& from) : MathRequest(nullptr, from) {}
-  inline MathRequest(MathRequest&& from) noexcept
-      : MathRequest(nullptr, std::move(from)) {}
-  inline MathRequest& operator=(const MathRequest& from) {
+  inline Parm2Request(const Parm2Request& from) : Parm2Request(nullptr, from) {}
+  inline Parm2Request(Parm2Request&& from) noexcept
+      : Parm2Request(nullptr, std::move(from)) {}
+  inline Parm2Request& operator=(const Parm2Request& from) {
     CopyFrom(from);
     return *this;
   }
-  inline MathRequest& operator=(MathRequest&& from) noexcept {
+  inline Parm2Request& operator=(Parm2Request&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -323,16 +323,16 @@ class MathRequest final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const MathRequest& default_instance() {
+  static const Parm2Request& default_instance() {
     return *internal_default_instance();
   }
-  static inline const MathRequest* internal_default_instance() {
-    return reinterpret_cast<const MathRequest*>(
-        &_MathRequest_default_instance_);
+  static inline const Parm2Request* internal_default_instance() {
+    return reinterpret_cast<const Parm2Request*>(
+        &_Parm2Request_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 0;
-  friend void swap(MathRequest& a, MathRequest& b) { a.Swap(&b); }
-  inline void Swap(MathRequest* other) {
+  friend void swap(Parm2Request& a, Parm2Request& b) { a.Swap(&b); }
+  inline void Swap(Parm2Request* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -344,7 +344,7 @@ class MathRequest final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(MathRequest* other) {
+  void UnsafeArenaSwap(Parm2Request* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -352,13 +352,13 @@ class MathRequest final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  MathRequest* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
-    return ::google::protobuf::Message::DefaultConstruct<MathRequest>(arena);
+  Parm2Request* New(::google::protobuf::Arena* arena = nullptr) const PROTOBUF_FINAL {
+    return ::google::protobuf::Message::DefaultConstruct<Parm2Request>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const MathRequest& from);
+  void CopyFrom(const Parm2Request& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const MathRequest& from) { MathRequest::MergeImpl(*this, from); }
+  void MergeFrom(const Parm2Request& from) { Parm2Request::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -395,16 +395,16 @@ class MathRequest final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(MathRequest* other);
+  void InternalSwap(Parm2Request* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "math.MathRequest"; }
+  static ::absl::string_view FullMessageName() { return "math.Parm2Request"; }
 
  protected:
-  explicit MathRequest(::google::protobuf::Arena* arena);
-  MathRequest(::google::protobuf::Arena* arena, const MathRequest& from);
-  MathRequest(::google::protobuf::Arena* arena, MathRequest&& from) noexcept
-      : MathRequest(arena) {
+  explicit Parm2Request(::google::protobuf::Arena* arena);
+  Parm2Request(::google::protobuf::Arena* arena, const Parm2Request& from);
+  Parm2Request(::google::protobuf::Arena* arena, Parm2Request&& from) noexcept
+      : Parm2Request(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const PROTOBUF_FINAL;
@@ -416,30 +416,30 @@ class MathRequest final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kNum1FieldNumber = 1,
-    kNum2FieldNumber = 2,
+    kXFieldNumber = 1,
+    kYFieldNumber = 2,
   };
-  // double num1 = 1;
-  void clear_num1() ;
-  double num1() const;
-  void set_num1(double value);
+  // double x = 1;
+  void clear_x() ;
+  double x() const;
+  void set_x(double value);
 
   private:
-  double _internal_num1() const;
-  void _internal_set_num1(double value);
+  double _internal_x() const;
+  void _internal_set_x(double value);
 
   public:
-  // double num2 = 2;
-  void clear_num2() ;
-  double num2() const;
-  void set_num2(double value);
+  // double y = 2;
+  void clear_y() ;
+  double y() const;
+  void set_y(double value);
 
   private:
-  double _internal_num2() const;
-  void _internal_set_num2(double value);
+  double _internal_y() const;
+  void _internal_set_y(double value);
 
   public:
-  // @@protoc_insertion_point(class_scope:math.MathRequest)
+  // @@protoc_insertion_point(class_scope:math.Parm2Request)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -449,7 +449,7 @@ class MathRequest final : public ::google::protobuf::Message
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_MathRequest_default_instance_;
+      &_Parm2Request_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -464,9 +464,9 @@ class MathRequest final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const MathRequest& from_msg);
-    double num1_;
-    double num2_;
+                          const Parm2Request& from_msg);
+    double x_;
+    double y_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -488,118 +488,118 @@ class MathRequest final : public ::google::protobuf::Message
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// MathRequest
+// Parm2Request
 
-// double num1 = 1;
-inline void MathRequest::clear_num1() {
+// double x = 1;
+inline void Parm2Request::clear_x() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.num1_ = 0;
+  _impl_.x_ = 0;
 }
-inline double MathRequest::num1() const {
-  // @@protoc_insertion_point(field_get:math.MathRequest.num1)
-  return _internal_num1();
+inline double Parm2Request::x() const {
+  // @@protoc_insertion_point(field_get:math.Parm2Request.x)
+  return _internal_x();
 }
-inline void MathRequest::set_num1(double value) {
-  _internal_set_num1(value);
-  // @@protoc_insertion_point(field_set:math.MathRequest.num1)
+inline void Parm2Request::set_x(double value) {
+  _internal_set_x(value);
+  // @@protoc_insertion_point(field_set:math.Parm2Request.x)
 }
-inline double MathRequest::_internal_num1() const {
+inline double Parm2Request::_internal_x() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.num1_;
+  return _impl_.x_;
 }
-inline void MathRequest::_internal_set_num1(double value) {
+inline void Parm2Request::_internal_set_x(double value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.num1_ = value;
+  _impl_.x_ = value;
 }
 
-// double num2 = 2;
-inline void MathRequest::clear_num2() {
+// double y = 2;
+inline void Parm2Request::clear_y() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.num2_ = 0;
+  _impl_.y_ = 0;
 }
-inline double MathRequest::num2() const {
-  // @@protoc_insertion_point(field_get:math.MathRequest.num2)
-  return _internal_num2();
+inline double Parm2Request::y() const {
+  // @@protoc_insertion_point(field_get:math.Parm2Request.y)
+  return _internal_y();
 }
-inline void MathRequest::set_num2(double value) {
-  _internal_set_num2(value);
-  // @@protoc_insertion_point(field_set:math.MathRequest.num2)
+inline void Parm2Request::set_y(double value) {
+  _internal_set_y(value);
+  // @@protoc_insertion_point(field_set:math.Parm2Request.y)
 }
-inline double MathRequest::_internal_num2() const {
+inline double Parm2Request::_internal_y() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.num2_;
+  return _impl_.y_;
 }
-inline void MathRequest::_internal_set_num2(double value) {
+inline void Parm2Request::_internal_set_y(double value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.num2_ = value;
+  _impl_.y_ = value;
 }
 
 // -------------------------------------------------------------------
 
-// MathResponse
+// Parm2Result
 
-// double result = 1;
-inline void MathResponse::clear_result() {
+// double z = 1;
+inline void Parm2Result::clear_z() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.result_ = 0;
+  _impl_.z_ = 0;
 }
-inline double MathResponse::result() const {
-  // @@protoc_insertion_point(field_get:math.MathResponse.result)
-  return _internal_result();
+inline double Parm2Result::z() const {
+  // @@protoc_insertion_point(field_get:math.Parm2Result.z)
+  return _internal_z();
 }
-inline void MathResponse::set_result(double value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:math.MathResponse.result)
+inline void Parm2Result::set_z(double value) {
+  _internal_set_z(value);
+  // @@protoc_insertion_point(field_set:math.Parm2Result.z)
 }
-inline double MathResponse::_internal_result() const {
+inline double Parm2Result::_internal_z() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return _impl_.result_;
+  return _impl_.z_;
 }
-inline void MathResponse::_internal_set_result(double value) {
+inline void Parm2Result::_internal_set_z(double value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.result_ = value;
+  _impl_.z_ = value;
 }
 
 // string error = 2;
-inline void MathResponse::clear_error() {
+inline void Parm2Result::clear_error() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.error_.ClearToEmpty();
 }
-inline const std::string& MathResponse::error() const
+inline const std::string& Parm2Result::error() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:math.MathResponse.error)
+  // @@protoc_insertion_point(field_get:math.Parm2Result.error)
   return _internal_error();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void MathResponse::set_error(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Parm2Result::set_error(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.error_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:math.MathResponse.error)
+  // @@protoc_insertion_point(field_set:math.Parm2Result.error)
 }
-inline std::string* MathResponse::mutable_error() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Parm2Result::mutable_error() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_error();
-  // @@protoc_insertion_point(field_mutable:math.MathResponse.error)
+  // @@protoc_insertion_point(field_mutable:math.Parm2Result.error)
   return _s;
 }
-inline const std::string& MathResponse::_internal_error() const {
+inline const std::string& Parm2Result::_internal_error() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.error_.Get();
 }
-inline void MathResponse::_internal_set_error(const std::string& value) {
+inline void Parm2Result::_internal_set_error(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.error_.Set(value, GetArena());
 }
-inline std::string* MathResponse::_internal_mutable_error() {
+inline std::string* Parm2Result::_internal_mutable_error() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.error_.Mutable( GetArena());
 }
-inline std::string* MathResponse::release_error() {
+inline std::string* Parm2Result::release_error() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:math.MathResponse.error)
+  // @@protoc_insertion_point(field_release:math.Parm2Result.error)
   return _impl_.error_.Release();
 }
-inline void MathResponse::set_allocated_error(std::string* value) {
+inline void Parm2Result::set_allocated_error(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.error_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -607,7 +607,7 @@ inline void MathResponse::set_allocated_error(std::string* value) {
           _impl_.error_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:math.MathResponse.error)
+  // @@protoc_insertion_point(field_set_allocated:math.Parm2Result.error)
 }
 
 #ifdef __GNUC__

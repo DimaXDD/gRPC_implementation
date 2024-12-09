@@ -35,121 +35,121 @@ class MathService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status Add(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> AsyncAdd(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(AsyncAddRaw(context, request, cq));
+    virtual ::grpc::Status Add(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> AsyncAdd(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(AsyncAddRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> PrepareAsyncAdd(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(PrepareAsyncAddRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> PrepareAsyncAdd(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(PrepareAsyncAddRaw(context, request, cq));
     }
-    virtual ::grpc::Status Subtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> AsyncSubtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(AsyncSubtractRaw(context, request, cq));
+    virtual ::grpc::Status Sub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> AsyncSub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(AsyncSubRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> PrepareAsyncSubtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(PrepareAsyncSubtractRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> PrepareAsyncSub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(PrepareAsyncSubRaw(context, request, cq));
     }
-    virtual ::grpc::Status Multiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> AsyncMultiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(AsyncMultiplyRaw(context, request, cq));
+    virtual ::grpc::Status Mul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> AsyncMul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(AsyncMulRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> PrepareAsyncMultiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(PrepareAsyncMultiplyRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> PrepareAsyncMul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(PrepareAsyncMulRaw(context, request, cq));
     }
-    virtual ::grpc::Status Divide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> AsyncDivide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(AsyncDivideRaw(context, request, cq));
+    virtual ::grpc::Status Div(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> AsyncDiv(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(AsyncDivRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> PrepareAsyncDivide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(PrepareAsyncDivideRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> PrepareAsyncDiv(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(PrepareAsyncDivRaw(context, request, cq));
     }
-    virtual ::grpc::Status Power(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> AsyncPower(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(AsyncPowerRaw(context, request, cq));
+    virtual ::grpc::Status Pow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> AsyncPow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(AsyncPowRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>> PrepareAsyncPower(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>>(PrepareAsyncPowerRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>> PrepareAsyncPow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>>(PrepareAsyncPowRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      virtual void Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* AsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* AsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* PrepareAsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* AsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* PrepareAsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* AsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* PrepareAsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* AsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::MathResponse>* PrepareAsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* AsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* AsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* PrepareAsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* AsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* PrepareAsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* AsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* PrepareAsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* AsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::math::Parm2Result>* PrepareAsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    ::grpc::Status Add(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> AsyncAdd(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(AsyncAddRaw(context, request, cq));
+    ::grpc::Status Add(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> AsyncAdd(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(AsyncAddRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> PrepareAsyncAdd(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(PrepareAsyncAddRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> PrepareAsyncAdd(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(PrepareAsyncAddRaw(context, request, cq));
     }
-    ::grpc::Status Subtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> AsyncSubtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(AsyncSubtractRaw(context, request, cq));
+    ::grpc::Status Sub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> AsyncSub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(AsyncSubRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> PrepareAsyncSubtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(PrepareAsyncSubtractRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> PrepareAsyncSub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(PrepareAsyncSubRaw(context, request, cq));
     }
-    ::grpc::Status Multiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> AsyncMultiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(AsyncMultiplyRaw(context, request, cq));
+    ::grpc::Status Mul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> AsyncMul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(AsyncMulRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> PrepareAsyncMultiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(PrepareAsyncMultiplyRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> PrepareAsyncMul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(PrepareAsyncMulRaw(context, request, cq));
     }
-    ::grpc::Status Divide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> AsyncDivide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(AsyncDivideRaw(context, request, cq));
+    ::grpc::Status Div(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> AsyncDiv(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(AsyncDivRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> PrepareAsyncDivide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(PrepareAsyncDivideRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> PrepareAsyncDiv(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(PrepareAsyncDivRaw(context, request, cq));
     }
-    ::grpc::Status Power(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> AsyncPower(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(AsyncPowerRaw(context, request, cq));
+    ::grpc::Status Pow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> AsyncPow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(AsyncPowRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>> PrepareAsyncPower(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::MathResponse>>(PrepareAsyncPowerRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>> PrepareAsyncPow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>>(PrepareAsyncPowRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) override;
-      void Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) override;
-      void Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) override;
-      void Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) override;
-      void Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      void Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)>) override;
-      void Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) override;
+      void Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) override;
+      void Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) override;
+      void Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) override;
+      void Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)>) override;
+      void Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -161,21 +161,21 @@ class MathService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* AsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* AsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* PrepareAsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* AsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* PrepareAsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* AsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* PrepareAsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* AsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::math::MathResponse>* PrepareAsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* AsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* AsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* PrepareAsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* AsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* PrepareAsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* AsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* PrepareAsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* AsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* PrepareAsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Add_;
-    const ::grpc::internal::RpcMethod rpcmethod_Subtract_;
-    const ::grpc::internal::RpcMethod rpcmethod_Multiply_;
-    const ::grpc::internal::RpcMethod rpcmethod_Divide_;
-    const ::grpc::internal::RpcMethod rpcmethod_Power_;
+    const ::grpc::internal::RpcMethod rpcmethod_Sub_;
+    const ::grpc::internal::RpcMethod rpcmethod_Mul_;
+    const ::grpc::internal::RpcMethod rpcmethod_Div_;
+    const ::grpc::internal::RpcMethod rpcmethod_Pow_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -183,11 +183,11 @@ class MathService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status Add(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response);
-    virtual ::grpc::Status Subtract(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response);
-    virtual ::grpc::Status Multiply(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response);
-    virtual ::grpc::Status Divide(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response);
-    virtual ::grpc::Status Power(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response);
+    virtual ::grpc::Status Add(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response);
+    virtual ::grpc::Status Sub(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response);
+    virtual ::grpc::Status Mul(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response);
+    virtual ::grpc::Status Div(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response);
+    virtual ::grpc::Status Pow(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_Add : public BaseClass {
@@ -201,95 +201,95 @@ class MathService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestAdd(::grpc::ServerContext* context, ::math::MathRequest* request, ::grpc::ServerAsyncResponseWriter< ::math::MathResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestAdd(::grpc::ServerContext* context, ::math::Parm2Request* request, ::grpc::ServerAsyncResponseWriter< ::math::Parm2Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_Subtract : public BaseClass {
+  class WithAsyncMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_Subtract() {
+    WithAsyncMethod_Sub() {
       ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithAsyncMethod_Subtract() override {
+    ~WithAsyncMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubtract(::grpc::ServerContext* context, ::math::MathRequest* request, ::grpc::ServerAsyncResponseWriter< ::math::MathResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSub(::grpc::ServerContext* context, ::math::Parm2Request* request, ::grpc::ServerAsyncResponseWriter< ::math::Parm2Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_Multiply : public BaseClass {
+  class WithAsyncMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_Multiply() {
+    WithAsyncMethod_Mul() {
       ::grpc::Service::MarkMethodAsync(2);
     }
-    ~WithAsyncMethod_Multiply() override {
+    ~WithAsyncMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestMultiply(::grpc::ServerContext* context, ::math::MathRequest* request, ::grpc::ServerAsyncResponseWriter< ::math::MathResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestMul(::grpc::ServerContext* context, ::math::Parm2Request* request, ::grpc::ServerAsyncResponseWriter< ::math::Parm2Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_Divide : public BaseClass {
+  class WithAsyncMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_Divide() {
+    WithAsyncMethod_Div() {
       ::grpc::Service::MarkMethodAsync(3);
     }
-    ~WithAsyncMethod_Divide() override {
+    ~WithAsyncMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDivide(::grpc::ServerContext* context, ::math::MathRequest* request, ::grpc::ServerAsyncResponseWriter< ::math::MathResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDiv(::grpc::ServerContext* context, ::math::Parm2Request* request, ::grpc::ServerAsyncResponseWriter< ::math::Parm2Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_Power : public BaseClass {
+  class WithAsyncMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_Power() {
+    WithAsyncMethod_Pow() {
       ::grpc::Service::MarkMethodAsync(4);
     }
-    ~WithAsyncMethod_Power() override {
+    ~WithAsyncMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPower(::grpc::ServerContext* context, ::math::MathRequest* request, ::grpc::ServerAsyncResponseWriter< ::math::MathResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPow(::grpc::ServerContext* context, ::math::Parm2Request* request, ::grpc::ServerAsyncResponseWriter< ::math::Parm2Result>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Add<WithAsyncMethod_Subtract<WithAsyncMethod_Multiply<WithAsyncMethod_Divide<WithAsyncMethod_Power<Service > > > > > AsyncService;
+  typedef WithAsyncMethod_Add<WithAsyncMethod_Sub<WithAsyncMethod_Mul<WithAsyncMethod_Div<WithAsyncMethod_Pow<Service > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_Add : public BaseClass {
    private:
@@ -297,135 +297,135 @@ class MathService final {
    public:
     WithCallbackMethod_Add() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) { return this->Add(context, request, response); }));}
+                   ::grpc::CallbackServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) { return this->Add(context, request, response); }));}
     void SetMessageAllocatorFor_Add(
-        ::grpc::MessageAllocator< ::math::MathRequest, ::math::MathResponse>* allocator) {
+        ::grpc::MessageAllocator< ::math::Parm2Request, ::math::Parm2Result>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~WithCallbackMethod_Add() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerUnaryReactor* Add(
-      ::grpc::CallbackServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/)  { return nullptr; }
+      ::grpc::CallbackServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_Subtract : public BaseClass {
+  class WithCallbackMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_Subtract() {
+    WithCallbackMethod_Sub() {
       ::grpc::Service::MarkMethodCallback(1,
-          new ::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) { return this->Subtract(context, request, response); }));}
-    void SetMessageAllocatorFor_Subtract(
-        ::grpc::MessageAllocator< ::math::MathRequest, ::math::MathResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) { return this->Sub(context, request, response); }));}
+    void SetMessageAllocatorFor_Sub(
+        ::grpc::MessageAllocator< ::math::Parm2Request, ::math::Parm2Result>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_Subtract() override {
+    ~WithCallbackMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Subtract(
-      ::grpc::CallbackServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* Sub(
+      ::grpc::CallbackServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_Multiply : public BaseClass {
+  class WithCallbackMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_Multiply() {
+    WithCallbackMethod_Mul() {
       ::grpc::Service::MarkMethodCallback(2,
-          new ::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) { return this->Multiply(context, request, response); }));}
-    void SetMessageAllocatorFor_Multiply(
-        ::grpc::MessageAllocator< ::math::MathRequest, ::math::MathResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) { return this->Mul(context, request, response); }));}
+    void SetMessageAllocatorFor_Mul(
+        ::grpc::MessageAllocator< ::math::Parm2Request, ::math::Parm2Result>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_Multiply() override {
+    ~WithCallbackMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Multiply(
-      ::grpc::CallbackServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* Mul(
+      ::grpc::CallbackServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_Divide : public BaseClass {
+  class WithCallbackMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_Divide() {
+    WithCallbackMethod_Div() {
       ::grpc::Service::MarkMethodCallback(3,
-          new ::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) { return this->Divide(context, request, response); }));}
-    void SetMessageAllocatorFor_Divide(
-        ::grpc::MessageAllocator< ::math::MathRequest, ::math::MathResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) { return this->Div(context, request, response); }));}
+    void SetMessageAllocatorFor_Div(
+        ::grpc::MessageAllocator< ::math::Parm2Request, ::math::Parm2Result>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_Divide() override {
+    ~WithCallbackMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Divide(
-      ::grpc::CallbackServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* Div(
+      ::grpc::CallbackServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithCallbackMethod_Power : public BaseClass {
+  class WithCallbackMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_Power() {
+    WithCallbackMethod_Pow() {
       ::grpc::Service::MarkMethodCallback(4,
-          new ::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) { return this->Power(context, request, response); }));}
-    void SetMessageAllocatorFor_Power(
-        ::grpc::MessageAllocator< ::math::MathRequest, ::math::MathResponse>* allocator) {
+                   ::grpc::CallbackServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) { return this->Pow(context, request, response); }));}
+    void SetMessageAllocatorFor_Pow(
+        ::grpc::MessageAllocator< ::math::Parm2Request, ::math::Parm2Result>* allocator) {
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
-      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::MathRequest, ::math::MathResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::math::Parm2Request, ::math::Parm2Result>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~WithCallbackMethod_Power() override {
+    ~WithCallbackMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Power(
-      ::grpc::CallbackServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/)  { return nullptr; }
+    virtual ::grpc::ServerUnaryReactor* Pow(
+      ::grpc::CallbackServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_Add<WithCallbackMethod_Subtract<WithCallbackMethod_Multiply<WithCallbackMethod_Divide<WithCallbackMethod_Power<Service > > > > > CallbackService;
+  typedef WithCallbackMethod_Add<WithCallbackMethod_Sub<WithCallbackMethod_Mul<WithCallbackMethod_Div<WithCallbackMethod_Pow<Service > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_Add : public BaseClass {
@@ -439,75 +439,75 @@ class MathService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_Subtract : public BaseClass {
+  class WithGenericMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_Subtract() {
+    WithGenericMethod_Sub() {
       ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithGenericMethod_Subtract() override {
+    ~WithGenericMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_Multiply : public BaseClass {
+  class WithGenericMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_Multiply() {
+    WithGenericMethod_Mul() {
       ::grpc::Service::MarkMethodGeneric(2);
     }
-    ~WithGenericMethod_Multiply() override {
+    ~WithGenericMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_Divide : public BaseClass {
+  class WithGenericMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_Divide() {
+    WithGenericMethod_Div() {
       ::grpc::Service::MarkMethodGeneric(3);
     }
-    ~WithGenericMethod_Divide() override {
+    ~WithGenericMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_Power : public BaseClass {
+  class WithGenericMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_Power() {
+    WithGenericMethod_Pow() {
       ::grpc::Service::MarkMethodGeneric(4);
     }
-    ~WithGenericMethod_Power() override {
+    ~WithGenericMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -524,7 +524,7 @@ class MathService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -533,82 +533,82 @@ class MathService final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_Subtract : public BaseClass {
+  class WithRawMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_Subtract() {
+    WithRawMethod_Sub() {
       ::grpc::Service::MarkMethodRaw(1);
     }
-    ~WithRawMethod_Subtract() override {
+    ~WithRawMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubtract(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSub(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithRawMethod_Multiply : public BaseClass {
+  class WithRawMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_Multiply() {
+    WithRawMethod_Mul() {
       ::grpc::Service::MarkMethodRaw(2);
     }
-    ~WithRawMethod_Multiply() override {
+    ~WithRawMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestMultiply(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestMul(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithRawMethod_Divide : public BaseClass {
+  class WithRawMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_Divide() {
+    WithRawMethod_Div() {
       ::grpc::Service::MarkMethodRaw(3);
     }
-    ~WithRawMethod_Divide() override {
+    ~WithRawMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDivide(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDiv(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
-  class WithRawMethod_Power : public BaseClass {
+  class WithRawMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_Power() {
+    WithRawMethod_Pow() {
       ::grpc::Service::MarkMethodRaw(4);
     }
-    ~WithRawMethod_Power() override {
+    ~WithRawMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPower(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPow(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -627,7 +627,7 @@ class MathService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -635,91 +635,91 @@ class MathService final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_Subtract : public BaseClass {
+  class WithRawCallbackMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_Subtract() {
+    WithRawCallbackMethod_Sub() {
       ::grpc::Service::MarkMethodRawCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Subtract(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Sub(context, request, response); }));
     }
-    ~WithRawCallbackMethod_Subtract() override {
+    ~WithRawCallbackMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Subtract(
+    virtual ::grpc::ServerUnaryReactor* Sub(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_Multiply : public BaseClass {
+  class WithRawCallbackMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_Multiply() {
+    WithRawCallbackMethod_Mul() {
       ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Multiply(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Mul(context, request, response); }));
     }
-    ~WithRawCallbackMethod_Multiply() override {
+    ~WithRawCallbackMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Multiply(
+    virtual ::grpc::ServerUnaryReactor* Mul(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_Divide : public BaseClass {
+  class WithRawCallbackMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_Divide() {
+    WithRawCallbackMethod_Div() {
       ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Divide(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Div(context, request, response); }));
     }
-    ~WithRawCallbackMethod_Divide() override {
+    ~WithRawCallbackMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Divide(
+    virtual ::grpc::ServerUnaryReactor* Div(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_Power : public BaseClass {
+  class WithRawCallbackMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_Power() {
+    WithRawCallbackMethod_Pow() {
       ::grpc::Service::MarkMethodRawCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Power(context, request, response); }));
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Pow(context, request, response); }));
     }
-    ~WithRawCallbackMethod_Power() override {
+    ~WithRawCallbackMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerUnaryReactor* Power(
+    virtual ::grpc::ServerUnaryReactor* Pow(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -730,10 +730,10 @@ class MathService final {
     WithStreamedUnaryMethod_Add() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::math::MathRequest, ::math::MathResponse>(
+          ::math::Parm2Request, ::math::Parm2Result>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::math::MathRequest, ::math::MathResponse>* streamer) {
+                     ::math::Parm2Request, ::math::Parm2Result>* streamer) {
                        return this->StreamedAdd(context,
                          streamer);
                   }));
@@ -742,124 +742,124 @@ class MathService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Add(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAdd(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::MathRequest,::math::MathResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedAdd(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::Parm2Request,::math::Parm2Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Subtract : public BaseClass {
+  class WithStreamedUnaryMethod_Sub : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Subtract() {
+    WithStreamedUnaryMethod_Sub() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::math::MathRequest, ::math::MathResponse>(
+          ::math::Parm2Request, ::math::Parm2Result>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::math::MathRequest, ::math::MathResponse>* streamer) {
-                       return this->StreamedSubtract(context,
+                     ::math::Parm2Request, ::math::Parm2Result>* streamer) {
+                       return this->StreamedSub(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Subtract() override {
+    ~WithStreamedUnaryMethod_Sub() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Subtract(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Sub(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedSubtract(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::MathRequest,::math::MathResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedSub(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::Parm2Request,::math::Parm2Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Multiply : public BaseClass {
+  class WithStreamedUnaryMethod_Mul : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Multiply() {
+    WithStreamedUnaryMethod_Mul() {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::math::MathRequest, ::math::MathResponse>(
+          ::math::Parm2Request, ::math::Parm2Result>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::math::MathRequest, ::math::MathResponse>* streamer) {
-                       return this->StreamedMultiply(context,
+                     ::math::Parm2Request, ::math::Parm2Result>* streamer) {
+                       return this->StreamedMul(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Multiply() override {
+    ~WithStreamedUnaryMethod_Mul() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Multiply(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Mul(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedMultiply(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::MathRequest,::math::MathResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedMul(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::Parm2Request,::math::Parm2Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Divide : public BaseClass {
+  class WithStreamedUnaryMethod_Div : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Divide() {
+    WithStreamedUnaryMethod_Div() {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::math::MathRequest, ::math::MathResponse>(
+          ::math::Parm2Request, ::math::Parm2Result>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::math::MathRequest, ::math::MathResponse>* streamer) {
-                       return this->StreamedDivide(context,
+                     ::math::Parm2Request, ::math::Parm2Result>* streamer) {
+                       return this->StreamedDiv(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Divide() override {
+    ~WithStreamedUnaryMethod_Div() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Divide(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Div(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDivide(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::MathRequest,::math::MathResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDiv(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::Parm2Request,::math::Parm2Result>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_Power : public BaseClass {
+  class WithStreamedUnaryMethod_Pow : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_Power() {
+    WithStreamedUnaryMethod_Pow() {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::math::MathRequest, ::math::MathResponse>(
+          ::math::Parm2Request, ::math::Parm2Result>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerUnaryStreamer<
-                     ::math::MathRequest, ::math::MathResponse>* streamer) {
-                       return this->StreamedPower(context,
+                     ::math::Parm2Request, ::math::Parm2Result>* streamer) {
+                       return this->StreamedPow(context,
                          streamer);
                   }));
     }
-    ~WithStreamedUnaryMethod_Power() override {
+    ~WithStreamedUnaryMethod_Pow() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Power(::grpc::ServerContext* /*context*/, const ::math::MathRequest* /*request*/, ::math::MathResponse* /*response*/) override {
+    ::grpc::Status Pow(::grpc::ServerContext* /*context*/, const ::math::Parm2Request* /*request*/, ::math::Parm2Result* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPower(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::MathRequest,::math::MathResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPow(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::math::Parm2Request,::math::Parm2Result>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Subtract<WithStreamedUnaryMethod_Multiply<WithStreamedUnaryMethod_Divide<WithStreamedUnaryMethod_Power<Service > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Sub<WithStreamedUnaryMethod_Mul<WithStreamedUnaryMethod_Div<WithStreamedUnaryMethod_Pow<Service > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Subtract<WithStreamedUnaryMethod_Multiply<WithStreamedUnaryMethod_Divide<WithStreamedUnaryMethod_Power<Service > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Add<WithStreamedUnaryMethod_Sub<WithStreamedUnaryMethod_Mul<WithStreamedUnaryMethod_Div<WithStreamedUnaryMethod_Pow<Service > > > > > StreamedService;
 };
 
 }  // namespace math

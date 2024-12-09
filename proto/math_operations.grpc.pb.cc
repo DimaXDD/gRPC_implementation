@@ -23,10 +23,10 @@ namespace math {
 
 static const char* MathService_method_names[] = {
   "/math.MathService/Add",
-  "/math.MathService/Subtract",
-  "/math.MathService/Multiply",
-  "/math.MathService/Divide",
-  "/math.MathService/Power",
+  "/math.MathService/Sub",
+  "/math.MathService/Mul",
+  "/math.MathService/Div",
+  "/math.MathService/Pow",
 };
 
 std::unique_ptr< MathService::Stub> MathService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -37,123 +37,123 @@ std::unique_ptr< MathService::Stub> MathService::NewStub(const std::shared_ptr< 
 
 MathService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
   : channel_(channel), rpcmethod_Add_(MathService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Subtract_(MathService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Multiply_(MathService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Divide_(MathService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Power_(MathService_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Sub_(MathService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Mul_(MathService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Div_(MathService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Pow_(MathService_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status MathService::Stub::Add(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Add_, context, request, response);
+::grpc::Status MathService::Stub::Add(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Add_, context, request, response);
 }
 
-void MathService::Stub::async::Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Add_, context, request, response, std::move(f));
+void MathService::Stub::async::Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Add_, context, request, response, std::move(f));
 }
 
-void MathService::Stub::async::Add(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void MathService::Stub::async::Add(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Add_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::MathResponse, ::math::MathRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Add_, context, request);
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::PrepareAsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::Parm2Result, ::math::Parm2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Add_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::AsyncAddRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::AsyncAddRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncAddRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status MathService::Stub::Subtract(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Subtract_, context, request, response);
+::grpc::Status MathService::Stub::Sub(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Sub_, context, request, response);
 }
 
-void MathService::Stub::async::Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Subtract_, context, request, response, std::move(f));
+void MathService::Stub::async::Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Sub_, context, request, response, std::move(f));
 }
 
-void MathService::Stub::async::Subtract(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Subtract_, context, request, response, reactor);
+void MathService::Stub::async::Sub(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Sub_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::PrepareAsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::MathResponse, ::math::MathRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Subtract_, context, request);
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::PrepareAsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::Parm2Result, ::math::Parm2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Sub_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::AsyncSubtractRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::AsyncSubRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncSubtractRaw(context, request, cq);
+    this->PrepareAsyncSubRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status MathService::Stub::Multiply(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Multiply_, context, request, response);
+::grpc::Status MathService::Stub::Mul(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Mul_, context, request, response);
 }
 
-void MathService::Stub::async::Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Multiply_, context, request, response, std::move(f));
+void MathService::Stub::async::Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Mul_, context, request, response, std::move(f));
 }
 
-void MathService::Stub::async::Multiply(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Multiply_, context, request, response, reactor);
+void MathService::Stub::async::Mul(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Mul_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::PrepareAsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::MathResponse, ::math::MathRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Multiply_, context, request);
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::PrepareAsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::Parm2Result, ::math::Parm2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Mul_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::AsyncMultiplyRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::AsyncMulRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncMultiplyRaw(context, request, cq);
+    this->PrepareAsyncMulRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status MathService::Stub::Divide(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Divide_, context, request, response);
+::grpc::Status MathService::Stub::Div(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Div_, context, request, response);
 }
 
-void MathService::Stub::async::Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Divide_, context, request, response, std::move(f));
+void MathService::Stub::async::Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Div_, context, request, response, std::move(f));
 }
 
-void MathService::Stub::async::Divide(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Divide_, context, request, response, reactor);
+void MathService::Stub::async::Div(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Div_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::PrepareAsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::MathResponse, ::math::MathRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Divide_, context, request);
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::PrepareAsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::Parm2Result, ::math::Parm2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Div_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::AsyncDivideRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::AsyncDivRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncDivideRaw(context, request, cq);
+    this->PrepareAsyncDivRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status MathService::Stub::Power(::grpc::ClientContext* context, const ::math::MathRequest& request, ::math::MathResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Power_, context, request, response);
+::grpc::Status MathService::Stub::Pow(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::math::Parm2Result* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Pow_, context, request, response);
 }
 
-void MathService::Stub::async::Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Power_, context, request, response, std::move(f));
+void MathService::Stub::async::Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Pow_, context, request, response, std::move(f));
 }
 
-void MathService::Stub::async::Power(::grpc::ClientContext* context, const ::math::MathRequest* request, ::math::MathResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Power_, context, request, response, reactor);
+void MathService::Stub::async::Pow(::grpc::ClientContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Pow_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::PrepareAsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::MathResponse, ::math::MathRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Power_, context, request);
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::PrepareAsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::math::Parm2Result, ::math::Parm2Request, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Pow_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::math::MathResponse>* MathService::Stub::AsyncPowerRaw(::grpc::ClientContext* context, const ::math::MathRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::math::Parm2Result>* MathService::Stub::AsyncPowRaw(::grpc::ClientContext* context, const ::math::Parm2Request& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncPowerRaw(context, request, cq);
+    this->PrepareAsyncPowRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -162,87 +162,87 @@ MathService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MathService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](MathService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::math::MathRequest* req,
-             ::math::MathResponse* resp) {
+             const ::math::Parm2Request* req,
+             ::math::Parm2Result* resp) {
                return service->Add(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MathService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](MathService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::math::MathRequest* req,
-             ::math::MathResponse* resp) {
-               return service->Subtract(ctx, req, resp);
+             const ::math::Parm2Request* req,
+             ::math::Parm2Result* resp) {
+               return service->Sub(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MathService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](MathService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::math::MathRequest* req,
-             ::math::MathResponse* resp) {
-               return service->Multiply(ctx, req, resp);
+             const ::math::Parm2Request* req,
+             ::math::Parm2Result* resp) {
+               return service->Mul(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MathService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](MathService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::math::MathRequest* req,
-             ::math::MathResponse* resp) {
-               return service->Divide(ctx, req, resp);
+             const ::math::Parm2Request* req,
+             ::math::Parm2Result* resp) {
+               return service->Div(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MathService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::MathRequest, ::math::MathResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< MathService::Service, ::math::Parm2Request, ::math::Parm2Result, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](MathService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::math::MathRequest* req,
-             ::math::MathResponse* resp) {
-               return service->Power(ctx, req, resp);
+             const ::math::Parm2Request* req,
+             ::math::Parm2Result* resp) {
+               return service->Pow(ctx, req, resp);
              }, this)));
 }
 
 MathService::Service::~Service() {
 }
 
-::grpc::Status MathService::Service::Add(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) {
+::grpc::Status MathService::Service::Add(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MathService::Service::Subtract(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) {
+::grpc::Status MathService::Service::Sub(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MathService::Service::Multiply(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) {
+::grpc::Status MathService::Service::Mul(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MathService::Service::Divide(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) {
+::grpc::Status MathService::Service::Div(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MathService::Service::Power(::grpc::ServerContext* context, const ::math::MathRequest* request, ::math::MathResponse* response) {
+::grpc::Status MathService::Service::Pow(::grpc::ServerContext* context, const ::math::Parm2Request* request, ::math::Parm2Result* response) {
   (void) context;
   (void) request;
   (void) response;

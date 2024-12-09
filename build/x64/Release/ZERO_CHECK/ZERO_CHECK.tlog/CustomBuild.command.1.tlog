@@ -1,0 +1,10 @@
+^E:\PROJECTS\GRPC\BUILD\CMAKEFILES\BF90FA6DEC8C74771BA406F10C35DD7E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Projects/gRPC -BE:/Projects/gRPC/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Projects/gRPC/build/gRPC.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

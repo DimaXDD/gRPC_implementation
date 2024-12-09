@@ -19,10 +19,8 @@
 1. Перейдите на официальный сайт CMake:
    [https://cmake.org/download/](https://cmake.org/download/)
 
-2. Выберите версию, подходящую для вашей операционной системы:
+2. Выберите версию, подходящую для вашей операционной системы (в нашем случае, выбираем версию для Windows):
    - **Windows**: `cmake-x.x.x-windows-x86_64.msi`
-   - **macOS**: `cmake-x.x.x-macos-universal.dmg`
-   - **Linux**: `cmake-x.x.x-linux-x86_64.tar.gz`
 
 ---
 
@@ -37,6 +35,13 @@
    cmake --version
    ```
 
+---
+
+## Установка пакета CMake C++ для Windows
+1. Переходим в Пуск, в строке поиска пишем **Visual Studio Installer**, далее запускаем инсталлятор.
+2. В окне инсталлятора находим нужную нам версию Visual Studio (если у вас установлены разные версии) и нажимаем на кнопку **Изменить**.
+3. В открывшимся окне переходим в раздел **Отдельные компоненты** и в строку поиска пишем **CMake C++ для Windows**.
+4. В результатах будет компонент с именем **Средства CMake C++ для Windows**, для установки нажимаем на галочку слева от компонента и соглашаемся с установкой.
 ---
 
 ## Шаг 2: Установка пакетного менеджера vcpkg
@@ -71,6 +76,9 @@
 ---
 
 ## Установка необходимых библиотек
+
+**!!! Важное уточнение !!! После выполнения первой команды, возможно скачается и protobuf, у многих скачивало сразу, выполняем команды по очереди и смотрим, что выводится в консоль**
+
 
 1. Установите gRPC для архитектуры x64-windows:
    ```sh
@@ -141,20 +149,20 @@
    package math;
 
    service MathService {
-    rpc Add (MathRequest) returns (MathResponse);
-    rpc Subtract (MathRequest) returns (MathResponse);
-    rpc Multiply (MathRequest) returns (MathResponse);
-    rpc Divide (MathRequest) returns (MathResponse);
-    rpc Power (MathRequest) returns (MathResponse);
+    rpc Add (Parm2Request) returns (Parm2Result);
+    rpc Sub (Parm2Request) returns (Parm2Result);
+    rpc Mul (Parm2Request) returns (Parm2Result);
+    rpc Div (Parm2Request) returns (Parm2Result);
+    rpc Pow (Parm2Request) returns (Parm2Result);
    }
 
-   message MathRequest {
-    double num1 = 1;
-    double num2 = 2;
+   message Parm2Request {
+    double x = 1;
+    double y = 2;
    }
 
-   message MathResponse {
-    double result = 1;
+   message Parm2Result {
+    double z = 1;
     string error = 2;
    }
    ```
@@ -186,40 +194,40 @@
 
    class MathServiceImpl final : public math::MathService::Service {
    public:
-    grpc::Status Add(grpc::ServerContext* context, const math::MathRequest* request,
-        math::MathResponse* response) override {
-        response->set_result(request->num1() + request->num2());
+    grpc::Status Add(grpc::ServerContext* context, const math::Parm2Request* request,
+        math::Parm2Result* response) override {
+        response->set_z(request->x() + request->y());
         return grpc::Status::OK;
     }
 
-    grpc::Status Subtract(grpc::ServerContext* context, const math::MathRequest* request,
-        math::MathResponse* response) override {
-        response->set_result(request->num1() - request->num2());
+    grpc::Status Sub(grpc::ServerContext* context, const math::Parm2Request* request,
+        math::Parm2Result* response) override {
+        response->set_z(request->x() - request->y());
         return grpc::Status::OK;
     }
 
-    grpc::Status Multiply(grpc::ServerContext* context, const math::MathRequest* request,
-        math::MathResponse* response) override {
-        response->set_result(request->num1() * request->num2());
+    grpc::Status Mul(grpc::ServerContext* context, const math::Parm2Request* request,
+        math::Parm2Result* response) override {
+        response->set_z(request->x() * request->y());
         return grpc::Status::OK;
     }
 
-    grpc::Status Divide(grpc::ServerContext* context, const math::MathRequest* request,
-        math::MathResponse* response) override {
-        if (request->num2() == 0) {
+    grpc::Status Div(grpc::ServerContext* context, const math::Parm2Request* request,
+        math::Parm2Result* response) override {
+        if (request->y() == 0) {
             response->set_error("Division by zero is not allowed.");
             return grpc::Status(grpc::StatusCode::INVALID_ARGUMENT, "Division by zero");
         }
-        response->set_result(request->num1() / request->num2());
+        response->set_z(request->x() / request->y());
         return grpc::Status::OK;
     }
 
-    grpc::Status Power(grpc::ServerContext* context, const math::MathRequest* request,
-        math::MathResponse* response) override {
-        response->set_result(pow(request->num1(), request->num2()));
+    grpc::Status Pow(grpc::ServerContext* context, const math::Parm2Request* request,
+        math::Parm2Result* response) override {
+        response->set_z(pow(request->x(), request->y()));
         return grpc::Status::OK;
     }
-    };
+   };
 
    void RunServer() {
     std::string server_address("0.0.0.0:50051");
@@ -251,8 +259,8 @@
    using grpc::ClientContext;
    using grpc::Status;
    using math::MathService;
-   using math::MathRequest;
-   using math::MathResponse;
+   using math::Parm2Request;
+   using math::Parm2Result;
 
    class MathClient {
    public:
@@ -260,68 +268,68 @@
         : stub_(MathService::NewStub(channel)) {
    }
 
-    void Add(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Add(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
         Status status = stub_->Add(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Addition result: " << response.result() << std::endl;
+            std::cout << "Addition result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Subtract(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Subtract(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Subtract(&context, request, &response);
+        Status status = stub_->Sub(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Subtraction result: " << response.result() << std::endl;
+            std::cout << "Subtraction result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Multiply(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Multiply(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Multiply(&context, request, &response);
+        Status status = stub_->Mul(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Multiplication result: " << response.result() << std::endl;
+            std::cout << "Multiplication result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    void Divide(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Divide(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Divide(&context, request, &response);
+        Status status = stub_->Div(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Division result: " << response.result() << std::endl;
+            std::cout << "Division result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << status.error_message() << std::endl;
@@ -329,35 +337,35 @@
     }
 
 
-    void Power(double num1, double num2) {
-        MathRequest request;
-        request.set_num1(num1);
-        request.set_num2(num2);
+    void Power(double x, double y) {
+        Parm2Request request;
+        request.set_x(x);
+        request.set_y(y);
 
-        MathResponse response;
+        Parm2Result response;
         ClientContext context;
 
-        Status status = stub_->Power(&context, request, &response);
+        Status status = stub_->Pow(&context, request, &response);
         if (status.ok()) {
-            std::cout << "Power result: " << response.result() << std::endl;
+            std::cout << "Power result: " << response.z() << std::endl;
         }
         else {
             std::cout << "Error: " << response.error() << std::endl;
         }
     }
 
-    std::future<void> MultiplyAsync(double num1, double num2) {
-        return std::async(std::launch::async, [this, num1, num2]() {
-            MathRequest request;
-            request.set_num1(num1);
-            request.set_num2(num2);
+    std::future<void> MultiplyAsync(double x, double y) {
+        return std::async(std::launch::async, [this, x, y]() {
+            Parm2Request request;
+            request.set_x(x);
+            request.set_y(y);
 
-            MathResponse response;
+            Parm2Result response;
             ClientContext context;
 
-            Status status = stub_->Multiply(&context, request, &response);
+            Status status = stub_->Mul(&context, request, &response);
             if (status.ok()) {
-                std::cout << "Multiplication result (async): " << response.result() << std::endl;
+                std::cout << "Multiplication result (async): " << response.z() << std::endl;
             }
             else {
                 std::cout << "Error: " << response.error() << std::endl;
@@ -365,27 +373,27 @@
             });
     }
 
-   private:
-    std::unique_ptr<MathService::Stub> stub_;
-   };
+    private:
+      std::unique_ptr<MathService::Stub> stub_;
+    };
 
    int main() {
-    MathClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+     MathClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
 
-    client.Add(3, 4);
-    client.Subtract(10, 5);
-    client.Multiply(6, 7);
-    auto multiplyFuture = client.MultiplyAsync(6, 7);
-    multiplyFuture.get();
-    client.Divide(10, 2);
-    client.Divide(10, 0);
-    client.Power(2, 3);
+     client.Add(3, 4);
+     client.Subtract(10, 5);
+     client.Multiply(6, 7);
+     auto multiplyFuture = client.MultiplyAsync(6, 7);
+     multiplyFuture.get();
+     client.Divide(10, 2);
+     client.Divide(10, 0);
+     client.Power(2, 3);
 
-    std::cout << "Press Enter to exit...";
-    std::cin.get();
+     std::cout << "Press Enter to exit...";
+     std::cin.get();
 
-    return 0;
-   }
+     return 0;
+    }
    ```
 
 ---

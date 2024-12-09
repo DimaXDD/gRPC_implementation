@@ -3,19 +3,19 @@ syntax = "proto3";
 package math;
 
 service MathService {
-  rpc Add (MathRequest) returns (MathResponse);
-  rpc Subtract (MathRequest) returns (MathResponse);
-  rpc Multiply (MathRequest) returns (MathResponse);
-  rpc Divide (MathRequest) returns (MathResponse);
-  rpc Power (MathRequest) returns (MathResponse);
+  rpc Add (Parm2Request) returns (Parm2Result);
+  rpc Sub (Parm2Request) returns (Parm2Result);
+  rpc Mul (Parm2Request) returns (Parm2Result);
+  rpc Div (Parm2Request) returns (Parm2Result);
+  rpc Pow (Parm2Request) returns (Parm2Result);
 }
 
-message MathRequest {
-  double num1 = 1;
-  double num2 = 2;
+message Parm2Request {
+  double x = 1;
+  double y = 2;
 }
 
-message MathResponse {
-  double result = 1;
+message Parm2Result {
+  double z = 1;
   string error = 2;
 }
